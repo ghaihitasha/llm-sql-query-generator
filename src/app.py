@@ -1,12 +1,27 @@
 import streamlit as st
 import sqlite3
 import openai
+import os
+from dotenv import load_dotenv
 from query_generator import generate_sql, load_db_schema
 from sql_validator import validate_sql, execute_test_query
 
 st.title("LLM-Based SQL Query Generator")
 
 st.sidebar.header("Project Settings")
+
+# Load API key from .env
+load_dotenv(override=True)
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+api_key = st.sidebar.text_input("OpenAI API Key",value=OPENAI_API_KEY,type = "password")
+
+if api_key:
+    openai.api_key = api_key
+    st.sidebar.success("Api Key Set!")
+else:
+    st.sidebar.warning("Please enter you OpenAI API Key to proceed.")
+
 db_path = st.sidebar.text_input("Database Path","data/spider_data/database/coffee_shop/coffee_shop.sqlite")
 
 natural_language_query = st.text_area("Enter your natural language query: ", "")
