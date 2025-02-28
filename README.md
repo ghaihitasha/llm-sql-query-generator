@@ -3,6 +3,9 @@
 ## Project Overview
 This project is an AI-powered SQL Query Generator that translates natural language queries into SQL statements using **GPT-4**. It helps users generate, validate, and execute SQL queries against a specified database schema.
 
+## User Interface
+![image](https://github.com/ghaihitasha/llm-sql-query-generator/blob/main/user_interface.png)
+
 ## Features
 - **Natural Language to SQL**: Uses OpenAI's GPT-4 to generate SQL queries.
 - **Query Validation**: Ensures generated queries are syntactically correct.
