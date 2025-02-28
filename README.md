@@ -19,7 +19,7 @@ This project is an AI-powered SQL Query Generator that translates natural langua
 ## 🚀 Installation & Setup
 ### 1️. Clone the Repository
 ```bash
-git clone https://github.com/your-username/llm-sql-query-generator.git
+git clone https://github.com/ghaihitasha/llm-sql-query-generator.git
 cd llm-sql-query-generator
 ```
 
@@ -36,7 +36,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 ### 4. Run the Streamlit App
 ```bash
-streamlit run src/ui.py
+streamlit run src/app.py
 ```
 
 ## Usage
